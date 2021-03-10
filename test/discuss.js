@@ -9,9 +9,9 @@ before(async() => {
 });
 
 after(async () => {
-    await context.close();
-    await browser.close();
-  });
+  await context.close();
+  await browser.close();
+});
 
 it('搜索商品，并查看评论', async () => {
   // Open new page
@@ -40,11 +40,7 @@ it('搜索商品，并查看评论', async () => {
 
   // Click text=全部评价 (0)
   await page1.click('#J-topbar > div > ul > a.dt-list-item.J-topbar-tabs.J-detail-commentCnt');
-//   'https://detail.vip.com/detail-3558963-711574031.html#J-FW-prdComment'
+  // 'https://detail.vip.com/detail-3558963-711574031.html#J-FW-prdComment'
   assert.equal(true, page1.url().startsWith('https://detail.vip.com/detail'));
   assert.equal(true, page1.url().endsWith('#J-FW-prdComment'), '判断URL 以 Comment 结束');
-
-  // ---------------------
-  await context.close();
-  await browser.close();
 });
