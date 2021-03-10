@@ -4,7 +4,7 @@ const assert = require('assert');
 let browser;
 let context;
 before(async() => {
-  browser = await chromium.launch({ headless: false});
+  browser = await chromium.launch({ headless: true});
   context = await browser.newContext();
 });
 
