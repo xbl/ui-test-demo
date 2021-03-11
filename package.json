@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "loop": "loopa 10 npm run test",
     "record": "playwright codegen",
     "test": "mocha --timeout 20000"
   },
@@ -13,5 +14,8 @@
   "devDependencies": {
     "mocha": "^8.3.1",
     "playwright": "^1.9.1"
+  },
+  "dependencies": {
+    "loopa": "^1.2.1"
   }
 }
