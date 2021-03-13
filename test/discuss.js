@@ -21,15 +21,15 @@ it('搜索商品，并查看评论', async () => {
   await page.goto('https://www.vip.com/');
 
   // Click [placeholder="护肤套装"]
-  await page.click('[placeholder="护肤套装"]');
+  await page.click('#J-search > div.c-search-form > input');
 
   // Fill [placeholder="护肤套装"]
-  await page.fill('[placeholder="护肤套装"]', '吉他');
+  await page.fill('#J-search > div.c-search-form > input', '吉他');
 
   // Press Enter
   await Promise.all([
     page.waitForNavigation(/*{ url: 'https://category.vip.com/suggest.php?keyword=%E5%90%89%E4%BB%96&ff=235|12|1|1' }*/),
-    page.press('[placeholder="护肤套装"]', 'Enter')
+    page.press('#J-search > div.c-search-form > input', 'Enter')
   ]);
 
   // Click text=尤克里里/ukulele 21寸乌克丽丽小吉他原木色
