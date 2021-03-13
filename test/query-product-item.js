@@ -4,7 +4,7 @@ const assert = require('assert');
 let browser;
 let context;
 before(async() => {
-  browser = await chromium.launch({ headless: false});
+  browser = await chromium.launch({ headless: true});
   context = await browser.newContext();
 });
 
@@ -13,7 +13,7 @@ after(async () => {
   await browser.close();
 });
 
-it.only('搜索商品列表，判断是否都包含 a 标签', async () => {
+it('搜索商品列表，判断是否都包含 a 标签', async () => {
   // Open new page
   const page = await context.newPage();
 
