@@ -1,10 +1,11 @@
 const { chromium } = require('playwright');
 const assert = require('assert');
+const CONFIG = require('../config');
 
 let browser;
 let context;
 before(async() => {
-  browser = await chromium.launch();
+  browser = await chromium.launch(CONFIG);
   context = await browser.newContext();
 });
 

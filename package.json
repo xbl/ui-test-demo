@@ -6,7 +6,7 @@
   "scripts": {
     "loop": "loopa 10 npm run test",
     "record": "playwright codegen",
-    "test": "mocha --timeout 20000"
+    "test": "mocha --timeout 50000"
   },
   "keywords": [],
   "author": "",
