@@ -13,9 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^8.3.1",
-    "playwright": "^1.9.1"
-  },
-  "dependencies": {
+    "playwright": "^1.9.1",
     "loopa": "^1.2.1"
   }
 }
