@@ -6,7 +6,7 @@
   "scripts": {
     "loop": "loopa 10 npm run test",
     "record": "playwright codegen",
-    "test": "mocha --timeout 50000",
+    "test": "mocha --require ./hook.js  --timeout 50000",
     "eslint": "eslint --fix"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "eslint": "^7.22.0",
     "loopa": "^1.2.1",
     "mocha": "^8.3.1",
+    "ora": "^5.4.0",
     "playwright": "^1.9.1"
   }
 }
