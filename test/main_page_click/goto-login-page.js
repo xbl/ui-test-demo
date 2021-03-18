@@ -22,5 +22,5 @@ it('点击登录之后跳转到登录页面', async () => {
   // Click #J_user_noId >> text=请登录
   await page.click('#J_user_noId >> text=请登录');
 
-  assert.equal(page.url(), 'https://passport.vip.com/login', "跳转登录页面失败！");
+  assert.equal(page.url(), 'https://passport.vip.com/login', '跳转登录页面失败！');
 });
